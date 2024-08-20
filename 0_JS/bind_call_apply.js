@@ -1,6 +1,6 @@
 // 手写 bind 函数
 // fn.bind(ctx, arg1, arg2) 内部暂存 ctx 和 参数
-// 关联题：实现 curry 返回偏函数
+// 关联题: 实现 curry 返回偏函数
 Function.prototype.myBind = function (ctx, ...args) {
   const fn = this;
   return (...newArgs) => {
