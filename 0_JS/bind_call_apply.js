@@ -1,6 +1,5 @@
-// 手写 bind 函数
 // fn.bind(ctx, arg1, arg2) 内部暂存 ctx 和 参数
-// 关联题: 实现 curry 返回偏函数
+// 关联题: 实现 curry 化, 返回偏函数
 Function.prototype.myBind = function (ctx, ...args) {
   const fn = this;
   return (...newArgs) => {
@@ -8,7 +7,6 @@ Function.prototype.myBind = function (ctx, ...args) {
   };
 };
 
-// 手写 call 函数
 // fn.call(ctx, arg1, arg2, arg3)
 Function.prototype.myCall = function (ctx = window, ...args) {
   const fn = this;
@@ -18,7 +16,6 @@ Function.prototype.myCall = function (ctx = window, ...args) {
   return res;
 };
 
-// 手写 apply 函数
 // fn.apply(ctx, [arg1, arg2, arg3])
 // apply 和 call 的区别: 第二个及以后参数合并为数组
 Function.prototype.myApply = function (ctx = window, args) {
@@ -30,7 +27,7 @@ Function.prototype.myApply = function (ctx = window, args) {
 };
 
 // Test
-const obj = { name: "obj" };
+const obj = { name: 'obj' };
 const fn = function (...args) {
   return [...args, this];
 };
