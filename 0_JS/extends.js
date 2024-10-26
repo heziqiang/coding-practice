@@ -32,9 +32,9 @@ Child.prototype.getAge = function () {
   return this.age;
 };
 
-let child1 = new Child("大聪明", 5);
+let child1 = new Child('大聪明', 5);
 child1.money.push(20);
-let child2 = new Child("小可爱", 3);
+let child2 = new Child('小可爱', 3);
 console.log(child1.getName());
 console.log(child1.getAge());
 console.log(child1.money);

@@ -39,10 +39,10 @@ class EventBus {
 
 // Test
 function sayHello(name) {
-  console.log("hello", name);
+  console.log('hello', name);
 }
 let ins1 = EventBus.getInstance();
 let ins2 = EventBus.getInstance();
-ins1.on("hello", sayHello);
-ins2.on("hello", sayHello);
-ins1.emit("hello", "ins1 发消息的人"); // 触发两条消息
+ins1.on('hello', sayHello);
+ins2.on('hello', sayHello);
+ins1.emit('hello', 'ins1 发消息的人'); // 触发两条消息
