@@ -1,4 +1,4 @@
-// implement reduce
+// Array reduce
 Array.prototype.myReduce = function (fn, value) {
   const startIndex = value ? 0 : 1;
   let acc = value || this[0];
@@ -7,7 +7,6 @@ Array.prototype.myReduce = function (fn, value) {
   }
   return acc;
 };
-
 
 // Test
 const arr = [1, 2, 3, 4];
