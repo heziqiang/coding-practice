@@ -1,6 +1,6 @@
 // Determine if an object has a circular reference
 
-// Method 1: use JSON.stringify, throw error if circular reference
+// Approach 1: use JSON.stringify, throw error if circular reference
 function hasCycle(obj) {
   try {
     JSON.stringify(obj);
@@ -12,7 +12,7 @@ function hasCycle(obj) {
   return false;
 }
 
-// Method 2: use a Set to store visited objects
+// Approach 2: use a Set to store visited objects
 // Time complexity: O(n)
 // Space complexity: O(n)
 function hasCycle2(obj) {
