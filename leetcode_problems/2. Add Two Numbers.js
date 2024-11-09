@@ -40,3 +40,11 @@ function addTwoNumbers(l1, l2) {
   }
   return dummy.next;
 }
+
+// Test
+import { createList } from './utils.js';
+const l1 = createList([3, 4]);
+const l2 = createList([5, 5]);
+const l3 = createList([9, 5]);
+console.log(addTwoNumbers(l1, l2)); // 8-9, 43 + 55 = 98
+console.log(addTwoNumbers(l1, l3)); // 2-0-1, 43 + 59 = 102
