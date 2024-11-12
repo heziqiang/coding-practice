@@ -24,25 +24,25 @@ import { ListNode } from './utils.js';
 
 function mergeTwoLists(list1, list2) {
   const dummy = new ListNode(0);
-  let tail = dummy;
+  let cur = dummy;
   let p1 = list1;
   let p2 = list2;
   while (p1 || p2) {
     if (!p1) {
-      tail.next = p2;
+      cur.next = p2;
       break;
     }
     if (!p2) {
-      tail.next = p1;
+      cur.next = p1;
       break;
     }
     if (p1.val < p2.val) {
-      tail.next = p1;
-      tail = tail.next;
+      cur.next = p1;
+      cur = cur.next;
       p1 = p1.next;
     } else {
-      tail.next = p2;
-      tail = tail.next;
+      cur.next = p2;
+      cur = cur.next;
       p2 = p2.next;
     }
   }
