@@ -12,3 +12,13 @@ export function createList(arr) {
   }
   return dummy.next;
 }
+
+export function printList(head) {
+  let cur = head;
+  let res = [];
+  while (cur) {
+    res.push(cur.val);
+    cur = cur.next;
+  }
+  console.log(res.join('-'));
+}
