@@ -50,7 +50,7 @@ function mergeTwoLists(list1, list2) {
 }
 
 // Test
-import { createList } from './utils.js';
+import { createList, printList } from './utils.js';
 const list1 = createList([1, 2, 4]);
 const list2 = createList([1, 3]);
-console.log(mergeTwoLists(list1, list2)); // 1-1-2-3-4
+printList(mergeTwoLists(list1, list2)); // 1-1-2-3-4

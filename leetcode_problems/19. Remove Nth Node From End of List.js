@@ -36,6 +36,6 @@ function removeNthFromEnd(head, n) {
 }
 
 // Test
-import { createList } from './utils.js';
+import { createList, printList } from './utils.js';
 const list = createList([1, 2, 3, 4, 5]);
-console.log(removeNthFromEnd(list, 2)); // 1-2-3-5
+printList(removeNthFromEnd(list, 2)); // 1-2-3-5
