@@ -14,6 +14,10 @@ export function createList(arr) {
 }
 
 export function printList(head) {
+  if (!head) {
+    console.log('null');
+    return;
+  }
   let cur = head;
   let res = [];
   while (cur) {
