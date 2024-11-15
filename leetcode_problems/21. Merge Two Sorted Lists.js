@@ -23,29 +23,19 @@ if one list is empty, append the rest of the other list.
 import { ListNode } from './utils.js';
 
 function mergeTwoLists(list1, list2) {
-  const dummy = new ListNode(0);
+  const dummy = new ListNode();
   let cur = dummy;
-  let p1 = list1;
-  let p2 = list2;
-  while (p1 || p2) {
-    if (!p1) {
-      cur.next = p2;
-      break;
-    }
-    if (!p2) {
-      cur.next = p1;
-      break;
-    }
-    if (p1.val < p2.val) {
-      cur.next = p1;
-      cur = cur.next;
-      p1 = p1.next;
+  while (list1 && list2) {
+    if (list1.val < list2.val) {
+      cur.next = list1;
+      list1 = list1.next;
     } else {
-      cur.next = p2;
-      cur = cur.next;
-      p2 = p2.next;
+      cur.next = list2;
+      list2 = list2.next;
     }
+    cur = cur.next;
   }
+  cur.next = list1 ? list1 : list2;
   return dummy.next;
 }
 
