@@ -9,7 +9,7 @@ Output: Intersected at '8'
 */
 
 /*
-Approach: Use Two Points, p1 and p2, p1 moves from headA to the end, then moves to headB, p2 moves from headB to the end, then moves to headA.
+Approach: Use Two Pointers, p1 and p2, p1 moves from headA to the end, then moves to headB, p2 moves from headB to the end, then moves to headA.
 They will go through the same distance, so they will meet at the intersection node or null.
 
 Time complexity: O(m+n)

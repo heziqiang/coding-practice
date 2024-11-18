@@ -13,7 +13,7 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 */
 
 /*
-Approach: Use Two Points, slow and fast, slow moves one step at a time, fast moves two steps at a time.
+Approach: Use Two Pointers, slow and fast, slow moves one step at a time, fast moves two steps at a time.
 Move both until fast reach the end. If there is a cycle, they will meet at some point.
 */
 import { ListNode } from './utils.js';

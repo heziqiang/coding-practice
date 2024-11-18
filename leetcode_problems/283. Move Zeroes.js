@@ -9,7 +9,7 @@ Output: [1,3,12,0,0]
 */
 
 /*
-Approach: Use Two Points, left and right, left is the tail of non-zero elements, right is the head of unhandled elements.
+Approach: Use Two Pointers, left and right, left is the tail of non-zero elements, right is the head of unhandled elements.
 Move right to the next non-zero elements, swap it with left, then move left.
 
 Time complexity: O(n)

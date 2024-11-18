@@ -9,7 +9,7 @@ Output: [3,4,5]
 */
 
 /*
-Approach: Use Two Points, slow and fast, slow moves 1 step at a time, fast moves 2 steps at a time.
+Approach: Use Two Pointers, slow and fast, slow moves 1 step at a time, fast moves 2 steps at a time.
 When fast reaches the end, slow is at the middle (start of the second half).
 
 Time complexity: O(n)

@@ -17,7 +17,7 @@ merging them into one sorted list:
 */
 
 /*
-Approach: Use k points to traverse through the k lists, compare the values and pick the smallest one,
+Approach: Use k pointers to traverse through the k lists, compare the values and pick the smallest one,
 go on until all the lists are empty.
 */
 import { ListNode } from './utils.js';
@@ -25,19 +25,19 @@ import { ListNode } from './utils.js';
 function mergeKLists(lists) {
   const dummy = new ListNode(0);
   let cur = dummy;
-  const points = [...lists];
-  while (points.some((node) => !!node)) {
+  const pointers = [...lists];
+  while (pointers.some((node) => !!node)) {
     let min = Number.MAX_SAFE_INTEGER;
     let minIndex = -1;
-    for (let i = 0; i < points.length; i++) {
-      if (points[i] && points[i].val < min) {
-        min = points[i].val;
+    for (let i = 0; i < pointers.length; i++) {
+      if (pointers[i] && pointers[i].val < min) {
+        min = pointers[i].val;
         minIndex = i;
       }
     }
-    cur.next = points[minIndex];
+    cur.next = pointers[minIndex];
     cur = cur.next;
-    points[minIndex] = points[minIndex].next;
+    pointers[minIndex] = pointers[minIndex].next;
   }
   return dummy.next;
 }

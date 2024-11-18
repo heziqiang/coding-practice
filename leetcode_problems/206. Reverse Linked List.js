@@ -8,7 +8,7 @@ Output: [5,4,3,2,1]
 */
 
 /*
-Approach: Use Two Points, pre and cur, pre starts from null, cur starts from head.
+Approach: Use Two Pointers, pre and cur, pre starts from null, cur starts from head.
 store cur.next node, make cur.next point to pre.
 move forward 1 step each time. when cur reaches null, return pre.
 

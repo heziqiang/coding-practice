@@ -16,7 +16,7 @@ Both list1 and list2 are sorted in non-decreasing order.
 */
 
 /*
-Approach: use Two Points traversal through the two lists,
+Approach: use Two Pointers traversal through the two lists,
 compare the values of the two nodes, use the smaller one first, then move the pointer to the next node.
 if one list is empty, append the rest of the other list.
 */

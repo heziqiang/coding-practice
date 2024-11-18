@@ -13,8 +13,8 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 */
 
 /*
-Approach: Use Two Points, slow and fast, slow moves 1 step at a time, fast moves 2 steps at a time.
-Move both points until they meet, they must be on the cycle.
+Approach: Use Two Pointers, slow and fast, slow moves 1 step at a time, fast moves 2 steps at a time.
+Move both until they meet, they must be on the cycle.
 x denotes the length of the linked list before starting the circle,
 y denotes the distance from the start of the cycle to where slow and fast met,
 C denotes the length of the cycle,
