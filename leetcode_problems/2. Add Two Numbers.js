@@ -17,8 +17,11 @@ It is guaranteed that the list represents a number that does not have leading ze
 */
 
 /*
-Approach: loop through the two linked lists by their max length.
+Approach: iterate through the two linked lists by their max length.
 Don't forget to handle the last carry, it may make the result longer by 1 digit.
+
+Time complexity: O(n)
+Space complexity: O(1)
 */
 import { ListNode } from './utils.js';
 

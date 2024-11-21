@@ -9,7 +9,7 @@ Explanation: The answer is "wke", with the length of 3.
 */
 
 /*
-Approach: Use sliding window, use two points left and right to represent the window.
+Approach: Use sliding window, use two pointers left and right to represent the window.
 Move right if there is no duplicate character, move left if there is a dumplicate character.
 
 Time complexity: O(n)
