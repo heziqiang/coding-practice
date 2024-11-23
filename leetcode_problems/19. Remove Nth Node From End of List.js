@@ -16,6 +16,9 @@ The number of nodes in the list is sz.
 /*
 Approach: Use Two Pointers, fast and slow, fast goes n steps first, then move together until fast reaches the end.
 slow is the previous node of the target.
+
+Time complexity: O(n)
+Space complexity: O(1)
 */
 import { ListNode } from './utils.js';
 
