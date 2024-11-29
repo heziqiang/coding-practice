@@ -11,6 +11,9 @@ Output: 2
 /*
 Approach: Use a map to store the sum from the start to the current index, and its frequency.
 go through the array, for each number x, check if sum == k or sum - k exists in the sum map.
+
+Time complexity: O(n)
+Space complexity: O(n)
 */
 
 function subarraySum(nums, k) {
