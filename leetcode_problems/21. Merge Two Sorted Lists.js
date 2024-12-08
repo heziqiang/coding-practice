@@ -17,8 +17,11 @@ Both list1 and list2 are sorted in non-decreasing order.
 
 /*
 Approach: use Two Pointers traversal through the two lists,
-compare the values of the two nodes, use the smaller one first, then move the pointer to the next node.
-if one list is empty, append the rest of the other list.
+Compare the values of the two nodes, pick the smaller one and move on.
+If one list is empty, append the rest of the other list.
+
+Time complexity: O(n)
+Space complexity: O(1)
 */
 import { ListNode } from './utils.js';
 
