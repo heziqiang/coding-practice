@@ -15,6 +15,9 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 /*
 Approach: Use Two Pointers, slow and fast, slow moves one step at a time, fast moves two steps at a time.
 Move both until fast reach the end. If there is a cycle, they will meet at some point.
+
+Time complexity: O(n)
+Space complexity: O(1)
 */
 import { ListNode } from './utils.js';
 
