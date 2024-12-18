@@ -29,17 +29,17 @@ function letterCombinations(digits) {
     8: 'tuv',
     9: 'wxyz',
   };
-  function dfs(nums, index, path) {
-    if (index >= nums.length) {
+  function dfs(index, path) {
+    if (index >= digits.length) {
       res.push(path);
       return;
     }
-    const str = map[nums[index]];
+    const str = map[digits[index]];
     for (let char of str) {
-      dfs(nums, index + 1, path + char);
+      dfs(index + 1, path + char);
     }
   }
-  dfs(digits, 0, '');
+  dfs(0, '');
   return res;
 }
 
