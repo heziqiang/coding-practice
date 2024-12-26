@@ -33,5 +33,7 @@ function swapPairs(head) {
 
 // Test
 import { createList } from './utils.js';
-let list = createList([1, 2, 3, 4]);
+const list = createList([1, 2, 3, 4]);
 printList(swapPairs(list)); // 2-1-4-3
+const list2 = createList([1, 2, 3]);
+printList(swapPairs(list2)); // 2-1-3
