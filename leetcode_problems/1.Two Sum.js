@@ -53,3 +53,4 @@ function twoSum(nums, target) {
 console.log(twoSum([1, 2, 0, 7], 9)); // [1, 3]
 console.log(twoSum([3, 2, 4], 6)); // [1, 2]
 console.log(twoSum([4, 5], 100)); // []
+console.log(twoSum([], 1)); // []
