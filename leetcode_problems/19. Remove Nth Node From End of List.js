@@ -5,12 +5,6 @@ Given the head of a linked list, remove the nth node from the end of the list an
 Example:
 Input: head = [1,2,3,4,5], n = 2
 Output: [1,2,3,5]
-
-Constraints:
-The number of nodes in the list is sz.
-1 <= sz <= 30
-0 <= Node.val <= 100
-1 <= n <= sz
 */
 
 /*
@@ -23,6 +17,7 @@ Space complexity: O(1)
 import { ListNode } from './utils.js';
 
 function removeNthFromEnd(head, n) {
+  if (!head || n < 0) return head;
   const dummy = new ListNode(0, head);
   let fast = dummy;
   let slow = dummy;
@@ -42,3 +37,4 @@ function removeNthFromEnd(head, n) {
 import { createList, printList } from './utils.js';
 const list = createList([1, 2, 3, 4, 5]);
 printList(removeNthFromEnd(list, 2)); // 1-2-3-5
+printList(removeNthFromEnd(null, 2)); // null
