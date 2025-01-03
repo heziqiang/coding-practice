@@ -41,3 +41,4 @@ function isValid(s) {
 console.log(isValid('([]){}')); // true
 console.log(isValid('()[]{}')); // true
 console.log(isValid('([)]')); // fasle
+console.log(isValid('')); // true
