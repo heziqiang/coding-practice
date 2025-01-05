@@ -25,6 +25,6 @@ function invertTree(root) {
 // Test
 import { createTree } from './utils.js';
 const tree = createTree([4, 2, 7, 1, 3, 6, 9]);
-console.log(invertTree(tree)); // [4,7,2,9,6,3,1]
 const tree2 = createTree([]);
+console.log(invertTree(tree)); // [4,7,2,9,6,3,1]
 console.log(invertTree(tree2)); // null
