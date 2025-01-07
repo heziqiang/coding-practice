@@ -28,8 +28,8 @@ function kthSmallest(root, k) {
     }
     dfs(node.right);
   }
-
   dfs(root);
+  if (count > 0) return null;
   return res;
 }
 
@@ -38,3 +38,4 @@ import { createTree } from './utils.js';
 const tree = createTree([3, 1, 4, null, 2]);
 console.log(kthSmallest(tree, 1)); // 1
 console.log(kthSmallest(tree, 3)); // 3
+console.log(kthSmallest(tree, 5)); // null
