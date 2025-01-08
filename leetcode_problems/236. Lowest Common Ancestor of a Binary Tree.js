@@ -31,3 +31,4 @@ function lowestCommonAncestor(root, p, q) {
 import { createTree } from './utils.js';
 const tree = createTree([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4]);
 console.log(lowestCommonAncestor(tree, tree.left, tree.right)); // 3
+console.log(lowestCommonAncestor(tree, tree.left.left, tree.left.right.right)); // 5
