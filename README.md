@@ -1,17 +1,17 @@
-# Algorithm Practice Repository
+# Coding Practice
 
-A comprehensive collection of algorithm problems and JavaScript programming exercises for coding skill improvement.
+A collection of algorithm problems and JavaScript exercises to improve coding skills.
 
 ## 📁 Project Structure
 
-algorithm/
+coding-practice/
 ├── leetcode_problems/ # LeetCode problem solutions
 ├── js_problems/ # JavaScript fundamental problems
 └── README.md # Project documentation
 
 ## 📝 Code Standards
 
-- Comprehensive problem descriptions and solution approaches
+- Problem descriptions and solution approaches
 - Multiple solution methods with complexity analysis
 - Time and space complexity documentation
 - Test cases for verification
