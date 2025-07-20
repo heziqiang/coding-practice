@@ -12,9 +12,11 @@ Output: 49
 */
 
 /*
-Approach: Use Two Pointers, left and right, start from the two ends and move towards the center.
-move the shorter one by one step each time.
-calculate the area and update the maxArea.
+Approach:
+Use two pointers: left starts at the front, right at the end. Calculate the current area = minHeight * width.
+Moving the taller pointer inward won't increase minHeight, so the area won't get larger.
+Instead, move the shorter pointer inward to try to find a taller line, recalculate the area, and update maxArea.
+Repeat until left meets right.
 
 Time complexity: O(n)
 Space complexity: O(1)
