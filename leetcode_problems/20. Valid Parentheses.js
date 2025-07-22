@@ -12,7 +12,9 @@ Output: true
 */
 
 /*
-Approach: Traverse through s, if open bracket, stack push, if close bracket, stack pop and check whether they are the same type.
+Approach:
+Traverse the string, If it’s an open bracket, push it onto the stack.
+If it’s a close bracket, pop from the stack and check if it matches the type.
 
 Time complexity: O(n)
 Space complexity: O(n) for stack of open brackets

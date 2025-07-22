@@ -17,7 +17,7 @@ merging them into one sorted list:
 */
 
 /*
-Approach: Use k pointers to traverse through the k lists, compare the values and pick the smallest one,
+Approach: Use k pointers to traverse the k lists, compare the values and pick the smallest one,
 go on until all the lists are empty.
 
 Time complexity: O(nk)

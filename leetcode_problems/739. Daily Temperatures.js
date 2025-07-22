@@ -9,7 +9,7 @@ Output: [1,1,4,2,1,1,0,0]
 */
 
 /*
-Approach: Use a descending stack to store indexs. Traverse through the temperatures, for each item compare it with the stack top item.
+Approach: Use a descending stack to store indexs. Traverse the temperatures, for each item compare it with the stack top item.
 If bigger then the stack top item, keep poping from the stack and set their index distance, until no bigger.
 Push the current index into stack.
 
