@@ -16,9 +16,12 @@ Only one valid answer exists.
 */
 
 /*
-Approach 1: Brute force approach, use nested loops to check every pair of elements
-if their sum equals the target.
+Brute force approach:
+Use nested loops, for each item of nums, iterate through the right subarray,
+check if their sum equal the target.
+
 Time complexity: O(n^2)
+Space complexity: O(1)
 */
 function twoSumBruteForce(nums, target) {
   for (let i = 0; i < nums.length; i++) {
@@ -32,19 +35,26 @@ function twoSumBruteForce(nums, target) {
 }
 
 /*
-Approach 2: Use a hash table to cache elements, only iterate through the array once,
-check if the target minus the current element exist in the hash table.
+Approach:
+Turn nums into a map, where the key is the number and the value is its index.
+Iterate through nums, for each number, check if the map has target-number,
+if found, return the pair of indices.
+Finally, return [] if not found.
+
+Optimized Approach (one-pass)
+Iterate through nums while building the cache map at the same time.
+
 Time complexity: O(n)
 Space complexity: O(n)
 */
 function twoSum(nums, target) {
-  const visited = new Map();
+  const map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    const current = nums[i];
-    if (visited.has(target - current)) {
-      return [visited.get(target - current), i];
+    const num = nums[i];
+    if (map.has(target - num)) {
+      return [map.get(target - num), i];
     }
-    visited.set(current, i);
+    map.set(num, i);
   }
   return [];
 }
@@ -53,4 +63,3 @@ function twoSum(nums, target) {
 console.log(twoSum([1, 2, 0, 7], 9)); // [1, 3]
 console.log(twoSum([3, 2, 4], 6)); // [1, 2]
 console.log(twoSum([4, 5], 100)); // []
-console.log(twoSum([], 1)); // []
