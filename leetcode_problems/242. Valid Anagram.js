@@ -16,6 +16,9 @@ Approach:
 Use a map to store the frequency of each character in s.
 Iterate through t: if the current character is in the map, decrement its count; if not, return false.
 Finally, return true if the map is empty.
+
+Time complexity: O(n)
+Space complexity: O(n) for map size
 */
 
 function isAnagram(s, t) {
