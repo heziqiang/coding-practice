@@ -16,9 +16,9 @@ The input is generated such that answer[i] is guaranteed to fit in a 32-bit inte
 
 /*
 Approach:
-For each number in nums, the product of all other elements equals its prefix product multiply suffix product.
-First, traverse from left to right to accumulate prefix products.
-Then, traverse from right to left to accumulate suffix products, and multiply them with the prefix products.
+For each number in nums, the product of all other elements equals its prefix product multiply its suffix product.
+First, scan left to build prefix products.
+Then, scan right to build suffix products and multiply them by the prefix products.
 */
 
 function productExceptSelf(nums) {
@@ -38,6 +38,6 @@ function productExceptSelf(nums) {
 }
 
 // Test
-console.log(productExceptSelf([1, 2, 3, 4])); // [24,12,8,6]
-console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0,0,9,0,0]
-console.log(productExceptSelf([])); // []
+console.log(productExceptSelf([1, 2, 3, 4])); // [24, 12, 8, 6]
+console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0, 0, 9, 0, 0]
+console.log(productExceptSelf([0, 1])); // [1, 0]
