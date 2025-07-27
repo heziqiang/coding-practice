@@ -17,8 +17,8 @@ The input is generated such that answer[i] is guaranteed to fit in a 32-bit inte
 /*
 Approach:
 For each number in nums, the product of all other elements equals its prefix product multiply its suffix product.
-First, scan left to build prefix products.
-Then, scan right to build suffix products and multiply them by the prefix products.
+First, iterate through nums to build prefix products.
+Then, iterate through in reverse to build suffix products and multiply them by the prefix products.
 */
 
 function productExceptSelf(nums) {
