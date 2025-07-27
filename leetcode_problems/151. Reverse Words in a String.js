@@ -17,16 +17,22 @@ There is at least one word in s.
 */
 
 /*
-Approach1:
-Use JS API s.trim().split(' ').reverse().join(' ')
+Approach:
+Use JS built-in methods.
 
 Time complexity: O(n)
 Space complexity: O(n)
 */
 
+function reverseWordsJS(s) {
+  return s.trim().split(" ").reverse().join(" ");
+}
+
 /*
-Approach2:
-Traverse the s reversely, skip the spaces, and append the word to the result.
+Approach:
+Use two pointers, left and right, to mark word boundaries, iterate through s in reverse,
+When left find a word, move right = left, move left until it's outside the word, add the current word to the result.
+Finally, return the result.
 
 Time complexity: O(n)
 Space complexity: O(1)
@@ -34,28 +40,29 @@ Space complexity: O(1)
 
 function reverseWords(s) {
   let result = "";
-  let word = "";
-  let i = s.length - 1;
-  while (i >= 0) {
-    while (s[i] !== " ") {
-      word = s[i] + word;
-      i--;
+  let left = s.length - 1;
+  let right = s.length - 1;
+  while (left >= 0) {
+    // skip spaces
+    if (s[left] === " ") {
+      left--;
+      continue;
     }
 
-    if (word) {
-      if (result.length) result += " ";
-      result += word;
-      word = "";
+    // meet a word
+    right = left;
+    while (left >= 0 && s[left] !== " ") {
+      left--;
     }
-    i--;
+    const word = s.slice(left + 1, right + 1);
+    if (result) result += " ";
+    result += word;
   }
-  if (word) {
-    result.push(word);
-  }
-  return result.join(" ");
+  return result;
 }
 
 // Test
-// console.log(reverseWords("the sky is blue")); // "blue is sky the"
-console.log(reverseWords("  hello world  ")); // "world hello"
-// console.log(reverseWords("a good   example ")); // "example good a"
+console.log(reverseWords("blue is sky the")); // "the sky is blue"
+console.log(reverseWords("EPY2giL")); // "EPY2giL"
+console.log(reverseWords("  world  hello ")); // "hello world"
+console.log(reverseWords("example good a ")); // "a goog example"
