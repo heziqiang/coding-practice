@@ -9,23 +9,28 @@ Every close bracket has a corresponding open bracket of the same type.
 Example:
 Input: s = "([]){}"
 Output: true
+
+Constraints:
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.
 */
 
 /*
 Approach:
-Traverse the string, If it’s an open bracket, push it onto the stack.
-If it’s a close bracket, pop from the stack and check if it matches the type.
+Iterate through s, If it’s an open bracket, push it to the stack;
+if it’s a close bracket, pop from the stack and check if they matche.
+Finally, return true if the stack is empty.
 
 Time complexity: O(n)
-Space complexity: O(n) for stack of open brackets
+Space complexity: O(n) for stack size
 */
 
 function isValid(s) {
   const stack = [];
   const map = {
-    '}': '{',
-    ']': '[',
-    ')': '(',
+    "}": "{",
+    "]": "[",
+    ")": "(",
   };
   for (let char of s) {
     // is close bracket
@@ -40,7 +45,7 @@ function isValid(s) {
 }
 
 // Test
-console.log(isValid('([]){}')); // true
-console.log(isValid('()[]{}')); // true
-console.log(isValid('([)]')); // fasle
-console.log(isValid('')); // true
+console.log(isValid("([]){}")); // true
+console.log(isValid("()[]{}")); // true
+console.log(isValid("([)]")); // fasle
+console.log(isValid("{}")); // true
