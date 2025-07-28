@@ -5,18 +5,21 @@ Given the head of a singly linked list, reverse the list, and return the reverse
 Example:
 Input: head = [1,2,3,4,5]
 Output: [5,4,3,2,1]
+
+Constraints:
+The number of nodes in the list is the range [0, 5000].
+-5000 <= Node.val <= 5000
 */
 
 /*
-Approach: Use Two Pointers, pre and cur, pre starts from null, cur starts from head.
-store cur.next node, make cur.next point to pre.
-move forward 1 step each time. when cur reaches null, return pre.
+Approach: Use Two Pointers, pre and cur, pre starts from beyond head, cur starts from head.
+Reverse them and move on, until cur is behind of tail, return pre.
 
 Time complexity: O(n)
 Space complexity: O(1)
 */
+
 function reverseList(head) {
-  if (!head) return null;
   let pre = null;
   let cur = head;
   while (cur) {
@@ -29,7 +32,7 @@ function reverseList(head) {
 }
 
 // Test
-import { createList, printList } from './utils.js';
-const list = createList([1, 2, 3, 4, 5]);
-printList(reverseList(list)); // 5-4-3-2-1
+import { createList, printList } from "./utils.js";
+
+printList(reverseList(createList([1, 2, 3, 4, 5]))); // 5-4-3-2-1
 printList(reverseList(null)); // null
