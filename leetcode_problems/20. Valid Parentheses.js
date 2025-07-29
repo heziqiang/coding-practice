@@ -17,12 +17,12 @@ s consists of parentheses only '()[]{}'.
 
 /*
 Approach:
-Iterate through s, If it’s an open bracket, push it to the stack;
+Iterate through s, If it’s an open bracket, push it onto the stack;
 if it’s a close bracket, pop from the stack and check if they matche.
 Finally, return true if the stack is empty.
 
 Time complexity: O(n)
-Space complexity: O(n) for stack size
+Space complexity: O(n) for stack depth
 */
 
 function isValid(s) {
