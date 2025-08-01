@@ -13,7 +13,7 @@ The number of nodes in the tree is in the range [0, 100].
 
 /*
 Approach:
-DFS iterative traversal
+Use iterative DFS.
 refer to { dfsIterative } from "../algorithm/dfs.js"
 */
 function inorderTraversal(root) {
