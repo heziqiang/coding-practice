@@ -17,6 +17,7 @@ DFS iterative traversal
 refer to { dfsIterative } from "../algorithm/dfs.js"
 */
 function inorderTraversal(root) {
+  if (!root) return [];
   const result = [];
   const stack = [[root, false]];
   while (stack.length) {

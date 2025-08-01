@@ -30,6 +30,7 @@ Time complexity: O(N)
 Space complexity: O(logN) ~ O(N), for recursive stack depth
 */
 function dfsIterative(root) {
+  if (!root) return [];
   const res = [];
   const stack = [[root, false]];
   while (stack.length) {
