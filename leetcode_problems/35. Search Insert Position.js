@@ -12,7 +12,7 @@ Output: 1
 /*
 Approach: Use binary search to find the index of min bigger item.
 
-Time complexity: O(log(n))
+Time complexity: O(log n)
 Space complexity: O(1)
 */
 

@@ -23,7 +23,7 @@ C denotes the length of the cycle,
 so if slow continue to move x steps, it will reach the start of the cycle.
 let head moves together with slow, they will meet at the start of the cycle.
 
-Time complexity: O(N)
+Time complexity: O(n)
 Space complexity: O(1)
 */
 

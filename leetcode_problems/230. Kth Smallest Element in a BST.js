@@ -13,7 +13,7 @@ Approach: DFS in-order traverse a BST tree will get the ascending order result.
 Just pick the Kth node's value.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function kthSmallest(root, k) {

@@ -3,8 +3,8 @@ DFS traversal (Recursive method)
 Approach:
 Visit the root node first, record its value, then recursively visit its left and right subtree.
 
-Time complexity: O(N)
-Space complexity: O(logN) ~ O(N), for recursive stack depth
+Time complexity: O(n)
+Space complexity: O(log n) ~ O(n), for recursive stack depth
 */
 function dfsRecursive(root) {
   const res = [];
@@ -26,8 +26,8 @@ Pop a node from the stack, if it is visited, record its value;
 otherwise mark it as visited and push its right child, itself, and its left child onto the stack.
 Continue until the stack is empty.
 
-Time complexity: O(N)
-Space complexity: O(logN) ~ O(N), for recursive stack depth
+Time complexity: O(n)
+Space complexity: O(log n) ~ O(n), for recursive stack depth
 */
 function dfsIterative(root) {
   if (!root) return [];

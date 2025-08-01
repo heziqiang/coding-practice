@@ -11,7 +11,7 @@ Output: [4,7,2,9,6,3,1]
 Approach: Traverse the tree, swap each node's left and right child.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function invertTree(root) {

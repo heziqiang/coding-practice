@@ -11,7 +11,7 @@ Output: true
 Approach: check if the two children are equal, and so are their opposite children.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function isSymmetric(root) {

@@ -13,10 +13,11 @@ Output: true
 */
 
 /*
-Approach: Use DFS recursive traversal. store the range of each node, which is a sub section of the parent node's range.
+Approach:
+Use recursive DFS, store the range of each node, which is a sub section of the parent node's range.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function isValidBST(root) {

@@ -6,13 +6,18 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 Example:
 Input: root = [3,9,20,null,null,15,7]
 Output: 3
+
+Constraints:
+The number of nodes in the tree is in the range [0, 104].
+-100 <= Node.val <= 100
 */
 
 /*
-Approach: User DFS recursive traversal, from top to bottom, empty node is at level 0 (base case).
+Approach:
+Use recursive DFS, a tree's max depth, is the maximum of its subtrees' depths plus one.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function maxDepth(root) {

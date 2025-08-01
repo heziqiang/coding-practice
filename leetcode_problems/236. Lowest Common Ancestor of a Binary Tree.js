@@ -14,7 +14,7 @@ Approach: If a node is the lowest common ancestor of p and q, it must be one the
 2. p or q is in its two separate subtree.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function lowestCommonAncestor(root, p, q) {

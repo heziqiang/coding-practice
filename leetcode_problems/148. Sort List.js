@@ -14,8 +14,8 @@ finding the tail of the first half, then set the tail.next to null.
 related problems:
 21. Merge Two Sorted Lists
 
-Time complexity: O(nlogn)
-Space complexity: O(logn) for recursion stack
+Time complexity: O(n log n)
+Space complexity: O(log n) for recursion stack
 */
 
 function sortList(head) {

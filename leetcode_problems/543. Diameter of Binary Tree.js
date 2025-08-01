@@ -16,7 +16,7 @@ Approach: The length of the longest path which pass a node, is sum of max depth 
 Traverse the tree for maxDepth of each node, store the max length.
 
 Time complexity: O(n)
-Space complexity: O(log(n)) for recursion stack
+Space complexity: O(log n) for recursion stack
 */
 
 function diameterOfBinaryTree(root) {
