@@ -20,6 +20,9 @@ Since a subtree of a tree can be the tree itself. Check if subRoot is the same a
 root, root's left subtree, root's right subtree.
 
 refer to problem: 100. Same Tree
+
+Time complexity: O(n)
+Space complexity: O(log n) - O(n) for recursion stack depth
 */
 
 function isSubtree(root, subRoot) {

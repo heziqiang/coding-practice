@@ -4,7 +4,7 @@ Approach:
 Visit the root node first, record its value, then recursively visit its left and right subtree.
 
 Time complexity: O(n)
-Space complexity: O(log n) ~ O(n), for recursive stack depth
+Space complexity: O(log n) - O(n), for recursion stack depth
 */
 function dfsRecursive(root) {
   const res = [];
@@ -27,7 +27,7 @@ otherwise mark it as visited and push its right child, itself, and its left chil
 Continue until the stack is empty.
 
 Time complexity: O(n)
-Space complexity: O(log n) ~ O(n), for recursive stack depth
+Space complexity: O(log n) - O(n), for recursion stack depth
 */
 function dfsIterative(root) {
   if (!root) return [];

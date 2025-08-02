@@ -14,7 +14,7 @@ The number of nodes in the tree is in the range [0, 104].
 
 /*
 Approach:
-Use recursive DFS, a tree's max depth, is the maximum of its subtrees' depths plus one.
+Use recursive DFS, the max depth of a tree, is the maximum of its subtrees' depths plus one.
 
 Time complexity: O(n)
 Space complexity: O(log n) for recursion stack
