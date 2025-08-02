@@ -14,7 +14,7 @@ The number of nodes in both trees is in the range [0, 100].
 
 /*
 Approach:
-Use recursive DFS, verify if their node values are same, and both the left and right subtrees are same.
+Use recursive DFS, check if their node values are same, and both the left and right subtrees are same.
 */
 
 function isSameTree(p, q) {
