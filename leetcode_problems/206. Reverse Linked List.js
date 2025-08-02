@@ -12,23 +12,23 @@ The number of nodes in the list is the range [0, 5000].
 */
 
 /*
-Approach: Use Two Pointers, pre and cur, pre starts from beyond head, cur starts from head.
-Reverse them and move on, until cur is behind of tail, return pre.
+Approach: Use Two Pointers, prev and cur, prev starts from beyond head, cur starts from head.
+Reverse them and move on, until cur is behind of tail, return prev.
 
 Time complexity: O(n)
 Space complexity: O(1)
 */
 
 function reverseList(head) {
-  let pre = null;
+  let prev = null;
   let cur = head;
   while (cur) {
     const next = cur.next;
-    cur.next = pre;
-    pre = cur;
+    cur.next = prev;
+    prev = cur;
     cur = next;
   }
-  return pre;
+  return prev;
 }
 
 // Test

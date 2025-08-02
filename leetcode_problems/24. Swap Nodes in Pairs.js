@@ -16,16 +16,16 @@ import { ListNode, printList } from './utils.js';
 
 function swapPairs(head) {
   const dummy = new ListNode(0, head);
-  let pre = dummy;
+  let prev = dummy;
   let cur = head;
   while (cur && cur.next) {
     // swap
     const next = cur.next;
-    pre.next = next;
+    prev.next = next;
     cur.next = next.next;
     next.next = cur;
     // move forward 2 steps
-    pre = cur;
+    prev = cur;
     cur = cur.next;
   }
   return dummy.next;

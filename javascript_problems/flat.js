@@ -8,8 +8,8 @@ Array.prototype.myFlat = function (depth = 1) {
   if (depth <= 0) {
     return arr;
   }
-  return arr.reduce((pre, cur) => {
-    return pre.concat(
+  return arr.reduce((prev, cur) => {
+    return prev.concat(
       Array.isArray(cur)
         ? cur.myFlat(depth - 1) // 扁平层级减一
         : cur

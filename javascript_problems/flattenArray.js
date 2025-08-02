@@ -24,8 +24,8 @@ function flatten(arr) {
 
 // 递归 + reduce
 function flatten2(arr) {
-  return arr.reduce((pre, cur) => {
-    return pre.concat(Array.isArray(cur) ? flatten2(cur) : cur);
+  return arr.reduce((prev, cur) => {
+    return prev.concat(Array.isArray(cur) ? flatten2(cur) : cur);
   }, []);
 }
 

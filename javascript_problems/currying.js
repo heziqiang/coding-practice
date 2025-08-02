@@ -47,7 +47,7 @@ function currying2(fn) {
 }
 
 function add(...args) {
-  return args.reduce((pre, cur) => pre + cur, 0);
+  return args.reduce((prev, cur) => prev + cur, 0);
 }
 
 const curriedAdd = currying2(add);

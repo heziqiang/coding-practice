@@ -46,15 +46,15 @@ function isPalindrome(head) {
 // 206. Reverse Linked List
 function reverseList(head) {
   if (!head) return null;
-  let pre = null;
+  let prev = null;
   let cur = head;
   while (cur) {
     const next = cur.next;
-    cur.next = pre;
-    pre = cur;
+    cur.next = prev;
+    prev = cur;
     cur = next;
   }
-  return pre;
+  return prev;
 }
 
 // Test
