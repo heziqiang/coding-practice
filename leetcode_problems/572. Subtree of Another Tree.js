@@ -16,8 +16,9 @@ The number of nodes in the subRoot tree is in the range [1, 1000].
 
 /*
 Approach:
-Since a subtree of a tree can be the tree itself. Check if subRoot is the same as one of the follows:
-root, root's left subtree, root's right subtree.
+Implement a helper function, isSameTree, to check if two binary trees are the same.
+Traverse root recursively, for each node, check if it is the same as subRoot.
+If true, return true; otherwise, recurse into the left and right children.
 
 refer to problem: 100. Same Tree
 
@@ -25,22 +26,20 @@ Time complexity: O(n)
 Space complexity: O(log n) - O(n) for recursion stack depth
 */
 
-function isSubtree(root, subRoot) {
-  function isSameTree(p, q) {
-    if (!p && !q) return true;
-    if (!p || !q) return false;
-    return (
-      p.val === q.val &&
-      isSameTree(p.left, q.left) &&
-      isSameTree(p.right, q.right)
-    );
-  }
-
+function isSameTree(p, q) {
+  if (!p && !q) return true;
+  if (!p || !q) return false;
   return (
-    isSameTree(root, subRoot) ||
-    isSameTree(root.left, subRoot) ||
-    isSameTree(root.right, subRoot)
+    p.val === q.val &&
+    isSameTree(p.left, q.left) &&
+    isSameTree(p.right, q.right)
   );
+}
+
+function isSubtree(root, subRoot) {
+  if (!root) return false;
+  if (isSameTree(root, subRoot)) return true;
+  return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 }
 
 // Test
