@@ -1,6 +1,5 @@
 /*
 70. Climbing Stairs
-
 You are climbing a staircase. It takes n steps to reach the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
@@ -13,7 +12,7 @@ Constraints:
 */
 
 /*
-Approach1:
+Approach:
 Dynamic Programming, dp[i] = dp[i - 1] + dp[i - 2]
 
 Time complexity: O(n)
@@ -21,7 +20,8 @@ Space complexity: O(n), for recursion stack depth
 */
 
 function climbStairs(n) {
-  if (n === 1 || n === 2) return n;
+  if (n === 1) return 1;
+  if (n === 2) return 2;
   return climbStairs(n - 1) + climbStairs(n - 2);
 }
 
@@ -34,7 +34,8 @@ Time complexity: O(n)
 Space complexity: O(1)
 */
 function climbStairs2(n) {
-  if (n === 1 || n === 2) return n;
+  if (n === 1) return 1;
+  if (n === 2) return 2;
   let a = 1;
   let b = 2;
   for (let i = 3; i <= n; i++) {
