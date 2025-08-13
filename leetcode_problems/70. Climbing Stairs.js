@@ -13,27 +13,26 @@ Constraints:
 
 /*
 Approach:
-Dynamic Programming, dp[i] = dp[i - 1] + dp[i - 2]
+Dynamic Programming Recursively, dp[i] = dp[i - 1] + dp[i - 2]
 
-Time complexity: O(n)
+Time complexity: O(2^n), similar to Fibonacci recursion
 Space complexity: O(n), for recursion stack depth
 */
 
-function climbStairs(n) {
+function climbStairsRecursive(n) {
   if (n === 1) return 1;
   if (n === 2) return 2;
   return climbStairs(n - 1) + climbStairs(n - 2);
 }
 
 /*
-/*
-Approach2:
-Optimize space complexity, use only two variables to store previous results.
+Approach:
+Dynamic Programming Iteratively, optimize space complexity, use only two variables to store previous results.
 
 Time complexity: O(n)
 Space complexity: O(1)
 */
-function climbStairs2(n) {
+function climbStairs(n) {
   if (n === 1) return 1;
   if (n === 2) return 2;
   let a = 1;
@@ -45,10 +44,11 @@ function climbStairs2(n) {
 }
 
 // Test
-console.log(climbStairs(3)); // 3
-console.log(climbStairs(4)); // 5
-console.log(climbStairs(5)); // 8
+console.log(climbStairs2(96)); // 3
+// console.log(climbStairs(3)); // 3
+// console.log(climbStairs(4)); // 5
+// console.log(climbStairs(5)); // 8
 
-console.log(climbStairs2(3)); // 3
-console.log(climbStairs2(4)); // 5
-console.log(climbStairs2(5)); // 8
+// console.log(climbStairs2(3)); // 3
+// console.log(climbStairs2(4)); // 5
+// console.log(climbStairs2(5)); // 8
