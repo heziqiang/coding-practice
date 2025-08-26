@@ -15,7 +15,7 @@ Constraints:
 Approach:
 Dynamic Programming Recursively, dp[i] = dp[i - 1] + dp[i - 2]
 
-Time complexity: O(2^n), similar to Fibonacci recursion
+Time complexity: O(2^n)
 Space complexity: O(n), for recursion stack depth
 */
 
@@ -44,11 +44,10 @@ function climbStairs(n) {
 }
 
 // Test
-console.log(climbStairs2(96)); // 3
-// console.log(climbStairs(3)); // 3
-// console.log(climbStairs(4)); // 5
-// console.log(climbStairs(5)); // 8
+console.log(climbStairsRecursive(3)); // 3
+console.log(climbStairsRecursive(4)); // 5
+console.log(climbStairsRecursive(5)); // 8
 
-// console.log(climbStairs2(3)); // 3
-// console.log(climbStairs2(4)); // 5
-// console.log(climbStairs2(5)); // 8
+console.log(climbStairs(3)); // 3
+console.log(climbStairs(4)); // 5
+console.log(climbStairs(5)); // 8
